@@ -77,7 +77,6 @@ def print_table(title, d):
 
 
 def ask_digit(prompt, d):
-    """The user types the random digit. 0 / 00 means the top value (100, 1000, ...)."""
     while True:
         try:
             x = int(input(prompt))
