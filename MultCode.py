@@ -31,12 +31,10 @@ def ask_range(name):
 
 
 def show(d, x):
-    """Random digit as text; the top value is shown as 00 / 000 ..."""
     return "0" * d["digits"] if x == d["top"] else str(x).zfill(d["digits"])
 
 
 def build_distribution(name, lo, hi):
-    """Builds ONE table (its own probabilities, cumulative, digits and intervals)."""
     values = list(range(lo, hi + 1))
     k = len(values)
     same = ask_yes_no(f"Are the {name} probabilities the same?")
@@ -105,7 +103,6 @@ def ask_mode(name):
 
 
 def get_draw(d, name, mode, c):
-    """One draw for customer c using table d. Returns (random digit or None, time)."""
     if mode == "times":
         return None, ask_time(f"{name.capitalize()} time of customer {c}: ")
     if mode == "generate":
